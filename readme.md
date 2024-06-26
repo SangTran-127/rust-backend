@@ -25,6 +25,11 @@
  cargo install cargo-nextest
  ```
 
+ * Cargo Watch(like nodemon in JS)
+ ```
+ cargo install cargo-watch
+ ```
+
  * Build
  ```
  cargo make build

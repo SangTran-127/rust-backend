@@ -1,0 +1,9 @@
+/Users/transang/Desktop/dummies/rust/rust-be/migration/target/debug/deps/libsea_query_derive-8d9347a984b09e17.dylib: /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/lib.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/error.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_attr.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_path.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_variant.rs
+
+/Users/transang/Desktop/dummies/rust/rust-be/migration/target/debug/deps/sea_query_derive-8d9347a984b09e17.d: /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/lib.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/error.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_attr.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_path.rs /Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_variant.rs
+
+/Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/lib.rs:
+/Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/error.rs:
+/Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_attr.rs:
+/Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_path.rs:
+/Users/transang/.cargo/registry/src/index.crates.io-6f17d22bba15001f/sea-query-derive-0.4.1/src/iden_variant.rs:

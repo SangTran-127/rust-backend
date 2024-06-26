@@ -1,0 +1,1 @@
+/Users/transang/Desktop/dummies/rust/rust-be/migration/target/debug/libmigration.rlib: /Users/transang/Desktop/dummies/rust/rust-be/migration/src/lib.rs /Users/transang/Desktop/dummies/rust/rust-be/migration/src/m20220101_000001_create_table.rs
