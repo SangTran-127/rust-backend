@@ -40,6 +40,6 @@ async fn get_random_number() -> AppResult<Json<Value>> {
     if num == 0 {
         Err(AppError::NotFound)
     } else {
-        Ok(Json(json!({"msg": 1})))
+        Ok(Json(json!({"msg": num})))
     }
 }
