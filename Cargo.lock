@@ -2155,6 +2155,7 @@ dependencies = [
  "migration",
  "sea-orm",
  "serde",
+ "thiserror",
  "tokio",
  "tracing",
  "tracing-subscriber",
