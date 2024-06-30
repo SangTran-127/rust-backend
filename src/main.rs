@@ -1,29 +1,26 @@
 use axum::{routing::get, Router};
-use entity::cat;
+use dotenv::dotenv;
+use rust_be::config::ProdConfig;
 use rust_be::db_connect::establish_connection;
-use sea_orm::{EntityTrait, Set};
+use tracing_subscriber;
 
 #[tokio::main]
 async fn main() {
-    let db = establish_connection()
+    dotenv().ok();
+    tracing_subscriber::fmt::init();
+    let cfg = ProdConfig::from_env().expect("Cannot load env");
+    establish_connection(&cfg.postgres.uri, cfg.postgres.max_conn)
         .await
         .expect("Cannot establish connection");
-    let test_cat = cat::ActiveModel {
-        name: Set(String::from("Shirou")),
-        ..Default::default()
-    };
-
-    let result = cat::Entity::insert(test_cat)
-        .exec(&db)
-        .await
-        .expect("Cannot create");
 
     let app = Router::new()
         .route("/", get(|| async { "Hello world" }))
         .route("/cat", get(get_cat));
 
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-    println!("Listening on port 3000");
+    let listener = tokio::net::TcpListener::bind(&cfg.web.address)
+        .await
+        .unwrap();
+    println!("Listening on port {}", cfg.web.address);
     axum::serve(listener, app).await.unwrap();
 }
 

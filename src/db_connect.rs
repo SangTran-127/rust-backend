@@ -1,13 +1,14 @@
 use migration::{Migrator, MigratorTrait};
-use sea_orm::{Database, DatabaseConnection, DbConn, DbErr};
+use sea_orm::{ConnectOptions, Database, DatabaseConnection, DbErr};
 
-pub async fn establish_connection() -> Result<DbConn, DbErr> {
-    let database_url = match std::env::var("DATABASE_URL") {
-        Ok(url) => url,
-        Err(_) => "postgresql://postgres@localhost:5432/rust_be".to_owned(),
-    };
+pub async fn establish_connection(
+    db_url: &String,
+    max_connection: u32,
+) -> Result<DatabaseConnection, DbErr> {
+    let mut connection_options = ConnectOptions::new(db_url);
+    connection_options.max_connections(max_connection);
 
-    let db_connect = Database::connect(database_url)
+    let db_connect = Database::connect(connection_options)
         .await
         .expect("Failed to setup the database");
 
